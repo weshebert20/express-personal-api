@@ -27,10 +27,10 @@ It's common for code to break "in production" (broken links, different environme
 ## Part 1. Personal API
 Now that we're deployed, it's time to start coding your "personal" api!
 
-#### Minimum Requirements
+#### Features
 
 - **Documented API Endpoints**
-    - You must document your API endpoints. We really want to know *how* to use your API! And for starters, we need to know what endpoints exist!
+    - Document your API endpoints. We really want to know *how* to use your API! And for starters, we need to know what endpoints exist!
         +  Don't make us [dictionary attack](https://en.wikipedia.org/wiki/Dictionary_attack) your site with guesses!
     - One cool way to do this is to create an endpoint that describes all the available endpoints(!). We've set you up with an example in `server.js`. Don't forget to update it!
         + See the [Open API Initiative](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#paths-object-example) for a neat example of this.
