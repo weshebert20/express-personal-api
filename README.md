@@ -60,7 +60,7 @@ All API Endpoints must return JSON.
 
 > **Pro-Tip**: One good strategy is to add the database last. Start with your api routes and some hard-coded data. Make sure it's working the way you want before tackling the database layer!
 
-#### API Stretch Goals
+#### API Stretch Goals/ Ideas
 * Profile info stretch goals
     * Add a `days_old` field that calculates how many days old you are.
     * Add an `is_awake` field that's only `true` between 8am and 10pm!
@@ -117,7 +117,7 @@ An example API for 'Jon Snow' might have endpoints like:
 
 Make sure to spend time planning this part out!
 
-## Part 2. Personal Dashboard
+## SUPER STRETCH: Part 2. Personal Dashboard
 
 #### Minimum Requirements
 Consume the Personal API you just created, and use it to build your own personal dashboard.
