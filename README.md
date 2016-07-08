@@ -1,6 +1,6 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10423298/ea833a68-7079-11e5-84f8-0a925ab96893.png" width="60"> Personal API - Weekend Lab
 
-Your goal is to build a API about yourself. Your API will incorporate:
+Your goal is to build an API about yourself. Your API will incorporate:
 * Well-documented **JSON API** Endpoints
 * A full set of **REST-ful Routes** (GET, POST, UPDATE, DELETE)
 * At least one **CRUD-able resource** (Create, Read, Update, Destroy)
