@@ -53,7 +53,7 @@ app.get('/api', function api_index(req, res) {
   });
 });
 
-app.get('api/profile', function(req, res){
+app.get('/api/profile', function(req, res){
   res.json({
     name: "Wes Hebert",
     github_link: "https://github.com/weshebert20",
