@@ -12,7 +12,7 @@ app.use(bodyParser.json());
  * DATABASE *
  ************/
 
-// var db = require('./models');
+var db = require('./models');
 
 /**********
  * ROUTES *
@@ -22,21 +22,17 @@ app.use(bodyParser.json());
 // i.e. `/images`, `/scripts`, `/styles`
 app.use(express.static('public'));
 
-/*
+/****************
  * HTML Endpoints
- */
+ ****************/
 
 app.get('/', function homepage(req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-
-
-/*
+/********************
  * JSON API Endpoints
- */
-
-
+ ********************/
 
 app.get('/api', function api_index(req, res) {
   // TODO: Document all your api endpoints below
@@ -53,6 +49,8 @@ app.get('/api', function api_index(req, res) {
   });
 });
 
+
+//profile information
 app.get('/api/profile', function(req, res){
   res.json({
     name: "Wes Hebert",
@@ -64,6 +62,14 @@ app.get('/api/profile', function(req, res){
       type: "Doggo",
       breed: "Mutt"
     }]
+  });
+});
+
+app.get('api/movie', function(req, res){
+  db.Movie.find().populate()
+  .exec(function(err, movies){
+    if (err) { return console.log("index error: " + err); }
+      res.json(movies);
   });
 });
 
