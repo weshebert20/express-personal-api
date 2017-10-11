@@ -31,9 +31,12 @@ app.get('/', function homepage(req, res) {
 });
 
 
+
 /*
  * JSON API Endpoints
  */
+
+
 
 app.get('/api', function api_index(req, res) {
   // TODO: Document all your api endpoints below
@@ -47,7 +50,21 @@ app.get('/api', function api_index(req, res) {
       {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
       {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
     ]
-  })
+  });
+});
+
+app.get('api/profile', function(req, res){
+  res.json({
+    name: "Wes Hebert",
+    github_link: "https://github.com/weshebert20",
+    github_profile_image: "https://avatars1.githubusercontent.com/u/14166450?v=4&s=460",
+    current_city: "Denver",
+    pets:[{
+      name: "Tucker",
+      type: "Doggo",
+      breed: "Mutt"
+    }]
+  });
 });
 
 /**********
