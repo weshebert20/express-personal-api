@@ -65,7 +65,7 @@ app.get('/api/profile', function(req, res){
   });
 });
 
-app.get('/api/movie', function(req, res){
+app.get('/api/movies', function(req, res){
   db.Movie.find()
   .exec(function(err, movies){
     if (err) { return console.log("index error: " + err); }
