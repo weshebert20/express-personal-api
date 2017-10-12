@@ -110,6 +110,14 @@ app.put('/api/movies/:id', function(req, res){
   });
 });
 
+// create delete route
+app.delete('/api/movies/:id', function(req, res){
+  let movieId = req.params.id;
+  db.Movie.findOneAndRemove({_id: movieId}, function(err, deletedMovie){
+    res.json(deletedMovie);
+  });
+});
+
 /**********
  * SERVER *
  **********/
