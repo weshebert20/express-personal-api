@@ -99,6 +99,16 @@ app.post('/api/movies', function(req,res){
   });
 });
 
+// create update route
+app.put('/api/movies/:id', function(req, res){
+  var getMovie = db.Movie.findOne({_id: req.params.id});
+
+  getMovie.title = req.body.title;
+  getMovie.director = req.body.director;
+  getMovie.year_released = req.body.year_released;
+  res.json(getMovie);
+});
+
 /**********
  * SERVER *
  **********/
