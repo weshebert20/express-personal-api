@@ -65,7 +65,7 @@ app.get('/api/profile', function(req, res){
   });
 });
 
-//movie route
+// get movie route
 app.get('/api/movies', function(req, res){
   db.Movie.find()
   .exec(function(err, movies){
@@ -74,10 +74,28 @@ app.get('/api/movies', function(req, res){
   });
 });
 
-//show route
+// create show route by ID
 app.get('/api/movies/:id', function(req,res){
   db.Movie.findOne({ _id: req.params.id }, function(err, data){
     res.json(data);
+  });
+});
+
+// create movie route
+app.post('/api/movies', function(req,res){
+  let newMovie = new db.Movie({
+    title: req.body.title,
+    director: req.body.director,
+    year_released: req.body.year_released
+  });
+
+  //save into database
+  newMovie.save(function(err,movie){
+    if (err){
+      return console.log("save error:", err);
+    }
+    console.log("saved", book.title);
+    res.json(movie);
   });
 });
 

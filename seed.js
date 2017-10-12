@@ -18,22 +18,22 @@ var db = require('./models');
 
 var new_movie = [
 	{
-		name: "Jurassic Park",
+		title: "Jurassic Park",
 		director: "Steven Spielberg",
 		year_released: 1993
 	},
 	{
-		name: "mother!",
+		title: "mother!",
 		director: "Darren Arronofsky",
 		year_released: 2017
 	},
 	{
-		name: "Arrival",
+		title: "Arrival",
 		director: "Denis Villeneuve",
 		year_released: 2016
 	},
 	{
-		name: "Kubo and the Two Strings",
+		title: "Kubo and the Two Strings",
 		director: "Travis Knight",
 		year_released: 2016
 	},
