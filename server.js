@@ -105,6 +105,7 @@ app.put('/api/movies/:id', function(req, res){
       movie.title = req.body.title;
       movie.director = req.body.director;
       movie.year_released = req.body.year_released;
+      movie.save();
       res.json(movie);
   });
 });
