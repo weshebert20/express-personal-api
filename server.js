@@ -50,7 +50,7 @@ app.get('/api', function api_index(req, res) {
 });
 
 
-//profile information
+//profile information route
 app.get('/api/profile', function(req, res){
   res.json({
     name: "Wes Hebert",
@@ -65,11 +65,19 @@ app.get('/api/profile', function(req, res){
   });
 });
 
+//movie route
 app.get('/api/movies', function(req, res){
   db.Movie.find()
   .exec(function(err, movies){
     if (err) { return console.log("index error: " + err); }
       res.json(movies);
+  });
+});
+
+//show route
+app.get('/api/movies/:id', function(req,res){
+  db.Movie.findOne({ _id: req.params.id }, function(err, data){
+    res.json(data);
   });
 });
 
