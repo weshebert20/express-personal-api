@@ -94,7 +94,7 @@ app.post('/api/movies', function(req,res){
     if (err){
       return console.log("save error:", err);
     }
-    console.log("saved", book.title);
+    console.log("saved", movie.title);
     res.json(movie);
   });
 });
