@@ -37,14 +37,18 @@ app.get('/', function homepage(req, res) {
 app.get('/api', function api_index(req, res) {
   // TODO: Document all your api endpoints below
   res.json({
-    woops_i_has_forgot_to_document_all_my_endpoints: true, // CHANGE ME ;)
-    message: "Welcome to my personal api! Here's what you need to know!",
-    documentation_url: "https://github.com/example-username/express_self_api/README.md", // CHANGE ME
-    base_url: "http://YOUR-APP-NAME.herokuapp.com", // CHANGE ME
+    woops_i_has_forgot_to_document_all_my_endpoints: false, // CHANGE ME ;)
+    message: "Welcome to my personal api! Here's some random stuffs about me",
+    documentation_url: "https://github.com/weshebert20/express-personal-api", // CHANGE ME
+    base_url: "https://thawing-lake-26184.herokuapp.com", // CHANGE ME
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
-      {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
+      {method: "GET", path: "/api/profile", description: "talk all about myself"}, // CHANGE ME
+      {method: "GET", path: "/api/movies", description: "shows all of the movies in the database"},
+      {method: "GET", path: "/api/movies/:id", description: "shows movie with specific id"},
+      {method: "POST", path: "/api/movies", description: "create new movie with director and year released"},
+      {method: "PUT", path: "/api/movies/:id", description: "update movie title/director/year released"},
+      {method: "DELETE", path: "/api/movies/:id", description: "lets you delete a movie by id"},
     ]
   });
 });
